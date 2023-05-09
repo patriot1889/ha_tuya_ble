@@ -239,15 +239,15 @@ mapping: dict[str, TuyaBLECategoryNumberMapping] = {
     ),
     "sfkzq": TuyaBLECategoryNumberMapping(
         products={
-            "1fcnd8xk":  # Soil moisture sensor
+            "1fcnd8xk":  # Water Valve
             [
                 TuyaBLENumberMapping(
-                    dp_id=17,
+                    dp_id=9,
                     description=NumberEntityDescription(
-                        key="reporting_period",
+                        key="time_use",
                         icon="mdi:timer",
-                        native_max_value=120,
-                        native_min_value=1,
+                        native_max_value=2592000,
+                        native_min_value=0,
                         native_unit_of_measurement=TIME_MINUTES,
                         native_step=1,
                         entity_category=EntityCategory.CONFIG,
