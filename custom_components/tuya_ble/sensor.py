@@ -239,6 +239,32 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ],
         },
     ),
+    "sfkzq": TuyaBLECategorySensorMapping(
+        products={
+            "1fcnd8xk":  # Water Valve
+            [
+                TuyaBLESensorMapping(
+                    dp_id=7,
+                    description=SensorEntityDescription(
+                        key="battery_percentage",
+                        icon="mdi:battery",
+                        device_class=SensorDeviceClass.INTEGER,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                        options=[
+                            BATTERY_STATE_LOW,
+                            BATTERY_STATE_NORMAL,
+                            BATTERY_STATE_HIGH,
+                        ],
+                    ),
+                    icons=[
+                        "mdi:battery-alert",
+                        "mdi:battery-50",
+                        "mdi:battery-check",
+                    ],
+                ),
+            ],
+        },
+    ),
 }
 
 
