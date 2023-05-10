@@ -248,7 +248,38 @@ mapping: dict[str, TuyaBLECategoryNumberMapping] = {
                         icon="mdi:timer",
                         native_max_value=2592000,
                         native_min_value=0,
-                        native_unit_of_measurement=TIME_MINUTES,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+            ],
+        },
+    ),
+    "ggq": TuyaBLECategoryNumberMapping(
+        products={
+            "fdrbxxbg":  # Water Valve
+            [
+                TuyaBLENumberMapping(
+                    dp_id=106,
+                    description=NumberEntityDescription(
+                        key="countdown_1",
+                        icon="mdi:timer",
+                        native_max_value=2592000,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=106,
+                    description=NumberEntityDescription(
+                        key="countdown_2",
+                        icon="mdi:timer",
+                        native_max_value=2592000,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
                         native_step=1,
                         entity_category=EntityCategory.CONFIG,
                     ),

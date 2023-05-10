@@ -241,8 +241,15 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             ),
         },
     ),
+    "ggq": TuyaBLECategoryInfo(
+        products={
+            "fdrbxxbg":  # device product_id
+            TuyaBLEProductInfo(
+                name="Dual Water valve controller",
+            ),
+        },
+    ),
 }
-
 
 def get_product_info_by_ids(
     category: str,

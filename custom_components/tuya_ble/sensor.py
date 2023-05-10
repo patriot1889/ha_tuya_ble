@@ -247,6 +247,14 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ],
         },
     ),
+    "ggq": TuyaBLECategorySensorMapping(
+        products={
+            "fdrbxxbg":  # Water Valve
+            [
+                TuyaBLEBatteryMapping(dp_id=11),
+            ],
+        },
+    ),
 }
 
 

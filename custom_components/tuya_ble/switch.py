@@ -188,6 +188,31 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
             ],
         },
     ),
+    "ggq": TuyaBLECategorySwitchMapping(
+        products={
+            "fdrbxxbg":  # Dual Water Valve
+            [
+                TuyaBLESwitchMapping(
+                    dp_id=105,
+                    description=SwitchEntityDescription(
+                        key="switch",
+                        icon="mdi:gesture-tap-box",
+                        entity_category=EntityCategory.CONFIG,
+                        entity_registry_enabled_default=True,
+                    ),
+                ),
+                TuyaBLESwitchMapping(
+                    dp_id=104,
+                    description=SwitchEntityDescription(
+                        key="switch",
+                        icon="mdi:gesture-tap-box",
+                        entity_category=EntityCategory.CONFIG,
+                        entity_registry_enabled_default=True,
+                    ),
+                ),
+            ],
+        },
+    ),
 }
 
 
