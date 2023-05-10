@@ -195,7 +195,7 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
                 TuyaBLESwitchMapping(
                     dp_id=105,
                     description=SwitchEntityDescription(
-                        key="switch",
+                        key="switch_1",
                         icon="mdi:gesture-tap-box",
                         entity_category=EntityCategory.CONFIG,
                         entity_registry_enabled_default=True,
@@ -204,7 +204,7 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
                 TuyaBLESwitchMapping(
                     dp_id=104,
                     description=SwitchEntityDescription(
-                        key="switch",
+                        key="switch_2",
                         icon="mdi:gesture-tap-box",
                         entity_category=EntityCategory.CONFIG,
                         entity_registry_enabled_default=True,
