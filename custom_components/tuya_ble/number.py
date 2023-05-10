@@ -242,11 +242,47 @@ mapping: dict[str, TuyaBLECategoryNumberMapping] = {
             "1fcnd8xk":  # Water Valve
             [
                 TuyaBLENumberMapping(
+                    dp_id=11,
+                    description=NumberEntityDescription(
+                        key="countdown",
+                        icon="mdi:timer",
+                        native_max_value=2592000,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
                     dp_id=9,
                     description=NumberEntityDescription(
                         key="time_use",
                         icon="mdi:timer",
                         native_max_value=2592000,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=9,
+                    description=NumberEntityDescription(
+                        key="time_use",
+                        icon="mdi:timer",
+                        native_max_value=86400,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=15,
+                    description=NumberEntityDescription(
+                        key="use_time_one",
+                        icon="mdi:timer",
+                        native_max_value=86400,
                         native_min_value=0,
                         native_unit_of_measurement=TIME_SECONDS,
                         native_step=1,
@@ -265,21 +301,45 @@ mapping: dict[str, TuyaBLECategoryNumberMapping] = {
                     description=NumberEntityDescription(
                         key="countdown_1",
                         icon="mdi:timer",
-                        native_max_value=2592000,
+                        native_max_value=1440,
                         native_min_value=0,
-                        native_unit_of_measurement=TIME_SECONDS,
+                        native_unit_of_measurement=TIME_MINUTES,
                         native_step=1,
                         entity_category=EntityCategory.CONFIG,
                     ),
                 ),
                 TuyaBLENumberMapping(
-                    dp_id=106,
+                    dp_id=103,
                     description=NumberEntityDescription(
                         key="countdown_2",
                         icon="mdi:timer",
-                        native_max_value=2592000,
+                        native_max_value=1440,
                         native_min_value=0,
-                        native_unit_of_measurement=TIME_SECONDS,
+                        native_unit_of_measurement=TIME_MINUTES,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=111,
+                    description=NumberEntityDescription(
+                        key="use_time_1",
+                        icon="mdi:timer",
+                        native_max_value=86400,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_MINUTES,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=110,
+                    description=NumberEntityDescription(
+                        key="use_time_2",
+                        icon="mdi:timer",
+                        native_max_value=86400,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_MINUTES,
                         native_step=1,
                         entity_category=EntityCategory.CONFIG,
                     ),

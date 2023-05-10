@@ -133,6 +133,26 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
             ],
         },
     ),
+    "sfkzq": TuyaBLECategorySelectMapping(
+        products={
+            "1fcnd8xk":  # Soil moisture sensor
+            [
+                TuyaBLESelectMapping(
+                    dp_id=10,
+                    description=SelectEntityDescription(
+                        key="beep_volume",
+                        options=[
+                            "cancel",
+                            "24h",
+                            "48h",
+                            "72h",
+                        ],
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+            ],
+        },
+    ),
 }
 
 
