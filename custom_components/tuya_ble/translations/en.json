@@ -30,14 +30,49 @@
     },
     "entity": {
         "binary_sensor": {
+
+
+
+            "lock_motor_state": {
+                "name": "Unlock"
+            },
+
+
             "low_battery": {
                 "name": "Battery"
             }
+
+
+
+
+
         },
         "button": {
             "push": {
                 "name": "Push"
+            },
+
+            "manual_lock": {
+                "name": "Manual lock"
+            },
+
+
+            "manual_unlock": {
+                "name": "Manual unlock"
+            },
+
+
+
+            "ble_unlock_check": {
+                "name": "ble_unlock_check"
             }
+
+
+
+
+
+
+
         },
         "number": {
             "brightness": {
@@ -46,6 +81,39 @@
             "carbon_dioxide_alarm_level": {
                 "name": "Alarm level"
             },
+
+
+
+            "residual_electricity": {
+                "name": "Batery"
+            },
+            "unlock_key": {
+                "name": "unlock_key"
+            },
+            "unlock_ble": {
+                "name": "unlock_ble"
+            },
+            "auto_lock_time": {
+                "name": "auto_lock_time"
+            },
+
+            "unlock_ble": {
+                "name": "unlock_ble"
+            },
+            "unlock_phone_remote": {
+                "name": "unlock_phone_remote"
+            },
+            "unlock_voice_remote": {
+                "name": "unlock_voice_remote"
+            },
+            "manual_lock": {
+                "name": "manual_lock"
+            },
+
+
+
+
+
             "countdown_duration": {
                 "name": "Irrigation duration"
             },
@@ -98,6 +166,37 @@
             "alarm_lock": {
                 "name": "Alarm"
             },
+
+
+
+            "unlock_key": {
+                "name": "Key open"
+            },
+
+
+            "remote_pd_setkey_check": {
+                "name": "remote_pd_setkey_check"
+            },
+
+            "unlock_record_check": {
+                "name": "unlock_record_check"
+            },
+
+            "ble_unlock_check": {
+                "name": "ble_unlock_check"
+            },
+
+            "check_code_set": {
+                "name": "check_code_set"
+            },
+
+            "record": {
+                "name": "record"
+            },
+
+
+
+
             "battery": {
                 "name": "Battery"
             },
@@ -142,6 +241,16 @@
             "signal_strength": {
                 "name": "Signal strength"
             },
+
+
+
+            "rssi_sensitivity_level": {
+                "name": "Signal"
+            },
+
+
+
+
             "temperature": {
                 "name": "Temperature"
             },
@@ -165,6 +274,41 @@
             "carbon_dioxide_alarm_switch": {
                 "name": "Alarm enabled"
             },
+
+
+            "automatic_lock": {
+                "name": "Automatic lock"
+            },
+
+            "ibeacon_switch": {
+                "name": "ibeacon_switch"
+            },
+
+
+            "rtc_lock": {
+                "name": "rtc_lock"
+            },
+
+            "special_control": {
+                "name": "special_control"
+            },
+
+
+
+
+            "manual_lock": {
+                "name": "Manual lock"
+            },
+
+
+            "manual_unlock": {
+                "name": "Manual unlock"
+            },
+
+
+
+
+
             "carbon_dioxide_severely_exceed_alarm": {
                 "name": "Severely exceed alarm"
             },
@@ -209,6 +353,21 @@
             }
         },
         "text": {
+
+
+            "unlock_method_create": {
+                "name": "unlock_method_create"
+            },
+            "unlock_method_delete": {
+                "name": "unlock_method_delete"
+            },
+            "unlock_method_modify": {
+                "name": "unlock_method_modify"
+            },
+
+
+
+
             "program": {
                 "name": "Program: position[/time];..."
             }
