@@ -181,6 +181,14 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             ),
         },
     ),
+    "jtmspro": TuyaBLECategoryInfo(
+        products={
+            "s6amdvmm": TuyaBLEProductInfo(  # device product_id
+                name="R2 smart lock",
+                manufacturer="Moes"
+            ),
+        },
+    ),
     "ms": TuyaBLECategoryInfo(
         products={
             **dict.fromkeys(

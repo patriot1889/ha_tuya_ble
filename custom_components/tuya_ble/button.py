@@ -95,6 +95,35 @@ mapping: dict[str, TuyaBLECategoryButtonMapping] = {
             ),
         },
     ),
+
+
+
+
+    "jtmspro": TuyaBLECategoryButtonMapping(
+        products={
+            "s6amdvmm":  # Smart water bottle
+            [
+                TuyaBLEButtonMapping(
+                    dp_id=46,
+                    description=ButtonEntityDescription(
+                        key="manual_lock",
+                    ),
+                ),
+
+                TuyaBLEButtonMapping(
+                    dp_id=6,
+                    description=ButtonEntityDescription(
+                        key="manual_unlock",  # not list dp. OPEN dp 6!!!!!! documet https://developer.tuya.com/en/docs/iot/ble-doorlock-developer-function-document?id=K9fwaai7m9wt3
+                    ),
+                ),
+
+
+
+            ],
+        },
+    ),
+
+
     "znhsb": TuyaBLECategoryButtonMapping(
         products={
             "cdlandip":  # Smart water bottle

@@ -160,6 +160,76 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
             ],
         },
     ),
+
+
+
+
+
+    "jtmspro": TuyaBLECategorySwitchMapping(
+        products={
+            "s6amdvmm": [  # GeekTale K01
+                TuyaBLESwitchMapping(
+                    dp_id=33,
+                    description=SwitchEntityDescription(
+                        key="automatic_lock",
+			entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLESwitchMapping(
+                    dp_id=44,
+                    description=SwitchEntityDescription(
+                        key="rtc_lock",
+			entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+
+
+                TuyaBLESwitchMapping(
+                    dp_id=78,
+                    description=SwitchEntityDescription(
+                        key="special_control",
+			entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+
+
+
+                TuyaBLESwitchMapping(
+                    dp_id=46,
+                    description=SwitchEntityDescription(
+                        key="manual_lock",
+			#entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+
+                TuyaBLESwitchMapping(
+                    dp_id=6,
+                    description=SwitchEntityDescription(
+                        key="manual_unlock",                   # not list dp. OPEN dp 6!!!!!! documet https://developer.tuya.com/en/docs/iot/ble-doorlock-developer-function-document?id=K9fwaai7m9wt3
+			#entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+
+
+
+
+
+                TuyaBLESwitchMapping(
+                    dp_id=90,
+                    description=SwitchEntityDescription(
+                        key="ibeacon_switch",
+			entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+            ]
+        }
+    ),
+
+
+
+
+
+
     "ms": TuyaBLECategorySwitchMapping(
         products={
             **dict.fromkeys(

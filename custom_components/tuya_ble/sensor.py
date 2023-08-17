@@ -146,6 +146,132 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ]
         }
     ),
+
+
+
+
+
+
+
+
+##########################################################################################################################
+
+
+    "jtmspro": TuyaBLECategorySensorMapping(
+        products={
+            "s6amdvmm": [  # Soil moisture sensor
+
+
+
+
+
+
+
+
+                TuyaBLESensorMapping(
+                    dp_id=69,
+                    description=SensorEntityDescription(
+                        key="record",
+                        #icon="mdi:battery",
+                        #device_class=SensorDeviceClass.CO2,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+
+                       
+                    ),
+                ),
+
+
+
+                TuyaBLESensorMapping(
+                    dp_id=70,
+                    description=SensorEntityDescription(
+                        key="check_code_set",
+                        #icon="mdi:battery",
+                        #device_class=SensorDeviceClass.CO2,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+
+                        
+                    ),
+                ),
+
+
+                TuyaBLESensorMapping(
+                    dp_id=71,
+                    description=SensorEntityDescription(
+                        key="ble_unlock_check",
+                        #icon="mdi:battery",
+                        #device_class=SensorDeviceClass.CO2,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+
+                        
+                    ),
+                ),
+
+                TuyaBLESensorMapping(
+                    dp_id=72,
+                    description=SensorEntityDescription(
+                        key="unlock_record_check",
+                        #icon="mdi:battery",
+                        #device_class=SensorDeviceClass.CO2,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+
+                        
+                    ),
+                ),
+
+                TuyaBLESensorMapping(
+                    dp_id=73,
+                    description=SensorEntityDescription(
+                        key="remote_pd_setkey_check",
+                        #icon="mdi:battery",
+                        #device_class=SensorDeviceClass.CO2,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+
+                        
+                    ),
+                ),
+
+
+
+                TuyaBLESensorMapping(
+                    dp_id=21,
+                    description=SensorEntityDescription(
+                        key="alarm_lock",
+                        icon="mdi:battery",
+                        device_class=SensorDeviceClass.ENUM,
+                        options=[
+                            "unclosed_time",
+                            "tongue_not_out",
+                            "low_battery",
+                            "power_off",
+
+                        ],
+                    ),
+                    icons=[
+                        "mdi:battery-alert",
+                        "mdi:battery-50",
+                        "mdi:battery-check",
+                        "mdi:battery-check",
+                    ],
+                ),
+
+                TuyaBLEBatteryMapping(dp_id=8),
+
+
+            ],
+        },
+    ),
+
+
+
+
+##########################################################################################################################
+
+
+
+
+
+
     "ms": TuyaBLECategorySensorMapping(
         products={
             **dict.fromkeys(

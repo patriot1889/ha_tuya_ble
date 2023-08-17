@@ -393,6 +393,104 @@ mapping: dict[str, TuyaBLECategoryNumberMapping] = {
             ],
         },
     ),
+
+
+
+#########################################################################################################
+
+    "jtmspro": TuyaBLECategoryNumberMapping(
+        products={
+            "s6amdvmm": [  # GeekTale K01
+                TuyaBLENumberMapping(
+                    dp_id=16,
+                    description=NumberEntityDescription(
+                        key="unlock_key",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=19,
+                    description=NumberEntityDescription(
+                        key="unlock_ble",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+
+
+                TuyaBLENumberMapping(
+                    dp_id=46,
+                    description=NumberEntityDescription(
+                        key="manual_lock",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+
+
+
+                TuyaBLENumberMapping(
+                    dp_id=36,
+                    description=NumberEntityDescription(
+                        key="auto_lock_time",
+                        native_max_value=1800,
+                        native_min_value=0,
+                        native_unit_of_measurement=TIME_SECONDS,
+                        native_step=1,
+                        entity_category=EntityCategory.CONFIG,
+                    ),
+                ),
+                TuyaBLENumberMapping(
+                    dp_id=62,
+                    description=NumberEntityDescription(
+                        key="unlock_phone_remote",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+
+
+                TuyaBLENumberMapping(
+                    dp_id=62,
+                    description=NumberEntityDescription(
+                        key="unlock_phone_remote",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+
+
+
+
+                TuyaBLENumberMapping(
+                    dp_id=63,
+                    description=NumberEntityDescription(
+                        key="unlock_voice_remote",
+                        native_max_value=999,
+                        native_min_value=0,
+                        native_step=1,
+                        entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+            ]
+        }
+    ),
+
+
+############################################################################################################
+
+
     "znhsb": TuyaBLECategoryNumberMapping(
         products={
             "cdlandip":  # Smart water bottle

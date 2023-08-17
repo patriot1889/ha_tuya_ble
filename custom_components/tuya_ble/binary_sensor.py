@@ -67,6 +67,41 @@ mapping: dict[str, TuyaBLECategoryBinarySensorMapping] = {
             ],
         },
     ),
+
+
+
+
+
+
+
+    "jtmspro": TuyaBLECategoryBinarySensorMapping(
+        products={
+            "s6amdvmm": [  # Thermostatic Radiator Valve
+                TuyaBLEBinarySensorMapping(
+                    dp_id=47,
+                    description=BinarySensorEntityDescription(
+                        key="lock_motor_state",
+                        #icon="mdi:battery-alert",
+                        #device_class=BinarySensorDeviceClass.BATTERY,
+                        #entity_category=EntityCategory.DIAGNOSTIC,
+                    ),
+                ),
+
+
+
+
+
+
+            ],
+        },
+    ),
+
+
+
+
+
+
+
 }
 
 
