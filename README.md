@@ -1,3 +1,115 @@
+<b>Add smart lock Moes R2</b>
+
+<p>add configuration.yaml</p>
+<div class=WordSection1>
+
+<p class=MsoNormal><span class=GramE><span lang=EN-US style='mso-ansi-language:
+EN-US'>lock</span></span><span lang=EN-US style='mso-ansi-language:EN-US'>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>  </span>- <span class=GramE>platform</span>: template<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>name</span>: Garage door<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span>value_template: &quot;{<span class=GramE>{
+is</span>_state('binary_sensor.bf75d830c48449b139xmbm_lock_motor_state', 'off')
+}}&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span><span class=GramE>lock</span>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- <span class=GramE>service</span>:
+switch.turn_off<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span><span class=GramE>data</span>: {}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span><span class=GramE>target</span>:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>entity_id:
+switch.bf75d830c48449b139xmbm_manual_lock<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- delay:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>hours: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>minutes: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>seconds: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>milliseconds: 300<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- service: switch.turn_on<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>         </span><span
+style='mso-spacerun:yes'>   </span>data: {}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>target:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>entity_id:
+switch.bf75d830c48449b139xmbm_manual_lock<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>    </span>unlock:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- service: switch.turn_off<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>data: {}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>target:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>entity_id:
+switch.bf75d830c48449b139xmbm_manual_unlock<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- delay:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>hours: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>minutes: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>seconds: 0<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span>milliseconds: 300<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>          </span>- service: switch.turn_on<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span>data: {}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>            </span></span><span class=SpellE>target</span>:<o:p></o:p></p>
+
+<p class=MsoNormal><span lang=EN-US style='mso-ansi-language:EN-US'><span
+style='mso-spacerun:yes'>              </span><span class=SpellE>entity_id</span>:
+switch.bf75d830c48449b139xmbm_manual_unlock<o:p></o:p></span></p>
+
+</div>
+
+
 # Home Assistant support for Tuya BLE devices
 
 ## Overview
