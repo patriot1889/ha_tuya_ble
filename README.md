@@ -1,3 +1,14 @@
+Connect lock app android or ios, not gateway!
+Remove lock geteway!
+Or delete device app and gateway
+Disconect power gateway!
+And new connect in app
+Turn off bluetooth in device
+Add in home assistant.
+Reconect battery
+
+
+
 <b>Add smart lock Moes R2</b>
 
 <p>add configuration.yaml</p>
