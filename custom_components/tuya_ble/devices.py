@@ -185,7 +185,7 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
         products={
             "s6amdvmm": TuyaBLEProductInfo(  # device product_id
                 name="R2 smart lock",
-                manufacturer="Moes"
+                manufacturer="Moes",
             ),
         },
     ),
