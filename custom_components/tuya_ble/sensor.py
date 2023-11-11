@@ -225,10 +225,10 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
         products={
             "04nb6kdt": [ # Temperature Humidity Sensor
                 TuyaBLETemperatureMapping(
-                    dp_id=101,
+                    dp_id=1,
                 ),
                 TuyaBLESensorMapping(
-                    dp_id=102,
+                    dp_id=2,
                     description=SensorEntityDescription(
                         key="moisture",
                         device_class=SensorDeviceClass.MOISTURE,
