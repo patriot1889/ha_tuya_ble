@@ -236,6 +236,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                         state_class=SensorStateClass.MEASUREMENT,
                     ),
                 ),
+                TuyaBLEBatteryMapping(dp_id=4),
             ],
             "ojzlzzsw": [  # Soil moisture sensor
                 TuyaBLETemperatureMapping(
