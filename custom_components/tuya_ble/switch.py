@@ -302,6 +302,17 @@ mapping: dict[str, TuyaBLECategorySwitchMapping] = {
     ),
     "wsdcg": TuyaBLECategorySwitchMapping(
         products={
+            "04nb6kdt": [  # Temperature Humidity Sensor
+                TuyaBLESwitchMapping(
+                    dp_id=21,
+                    description=SwitchEntityDescription(
+                        key="switch",
+                        icon="mdi:thermometer",
+                        entity_category=EntityCategory.CONFIG,
+                        entity_registry_enabled_default=False,
+                    ),
+                ),
+            ],
             "ojzlzzsw": [  # Soil moisture sensor
                 TuyaBLESwitchMapping(
                     dp_id=21,
