@@ -135,6 +135,19 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
     ),
     "wsdcg": TuyaBLECategorySelectMapping(
         products={
+            "04nb6kdt":  # Temperature Humidity Sensor
+            [
+                TuyaBLESelectMapping(
+                    dp_id=9,
+                    description=TemperatureUnitDescription(
+                        options=[
+                            UnitOfTemperature.CELSIUS,
+                            UnitOfTemperature.FAHRENHEIT,
+                        ],
+                        entity_registry_enabled_default=False,
+                    )
+                ),
+            ],
             "ojzlzzsw":  # Soil moisture sensor
             [
                 TuyaBLESelectMapping(
