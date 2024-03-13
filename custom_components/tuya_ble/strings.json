@@ -32,7 +32,13 @@
     "button": {
       "push": {
         "name": "Push"
-      }
+      },
+      "manual_unlock": {
+        "name": "Unlock"
+      },
+      "manual_lock": {
+        "name": "Lock"
+      }  
     },
     "number": {
       "brightness": {
@@ -92,7 +98,10 @@
     "binary_sensor": {
       "low_battery": {
         "name": "[%key:component::sensor::entity_component::battery::name%]"
-      }
+      },
+      "lock_motor_state": {
+        "name": "Lock state"
+      }  
     },
     "sensor": {
       "battery": {
