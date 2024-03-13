@@ -500,7 +500,7 @@ class TuyaBLEDevice:
             )
             return
         self._client = None
-        _LOGGER.warning(
+        _LOGGER.error(
             "%s: Device unexpectedly disconnected; RSSI: %s",
             self.address,
             self.rssi,
@@ -1298,8 +1298,9 @@ class TuyaBLEDevice:
             data += pack(">BBB", dp.id, int(dp.type.value), len(value))
             data += value
 
-        await self._send_packet(TuyaBLECode.FUN_SENDER_DPS, data)
-
+        #await self._send_packet(TuyaBLECode.FUN_SENDER_DPS, data)
+        await self._send_packet(TuyaBLECode.FUN_SENDER_DPS, data, False)
+        
     async def _send_datapoints(self, datapoint_ids: list[int]) -> None:
         """Send new values of datapoints to the device."""
         if self._protocol_version == 3:
