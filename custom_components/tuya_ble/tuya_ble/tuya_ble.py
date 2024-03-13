@@ -500,7 +500,7 @@ class TuyaBLEDevice:
             )
             return
         self._client = None
-        _LOGGER.error(
+        _LOGGER.warning(
             "%s: Device unexpectedly disconnected; RSSI: %s",
             self.address,
             self.rssi,
