@@ -54,6 +54,7 @@ class TuyaBLEProductInfo:
     name: str
     manufacturer: str = DEVICE_DEF_MANUFACTURER
     fingerbot: TuyaBLEFingerbotInfo | None = None
+    lock: int | None = None
 
 
 class TuyaBLEEntity(CoordinatorEntity):
@@ -191,6 +192,16 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
                     TuyaBLEProductInfo(  # device product_id
                     name="Smart Lock",
                 ),
+            ),
+        },
+    ),
+    "jtmspro": TuyaBLECategoryInfo(
+        products={
+            "rlyxv7pe":  # Gimdow device product_id
+            TuyaBLEProductInfo(
+                name="A1 PRO MAX",
+                # Gimdow identity
+                lock=1,
             ),
         },
     ),
