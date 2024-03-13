@@ -3,6 +3,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+from threading import Timer
+import time
+from .tuya_ble import TuyaBLEDataPointType
+
 import logging
 from typing import Callable
 
@@ -43,7 +47,7 @@ class TuyaBLEBinarySensorMapping:
     #coefficient: float = 1.0
     #icons: list[str] | None = None
     is_available: TuyaBLEBinarySensorIsAvailable = None
-
+    with_ping: bool | None = None
 
 @dataclass
 class TuyaBLECategoryBinarySensorMapping:
@@ -66,6 +70,22 @@ mapping: dict[str, TuyaBLECategoryBinarySensorMapping] = {
                 ),
             ],
         },
+    ),
+    "jtmspro": TuyaBLECategoryBinarySensorMapping(
+        products={
+            "rlyxv7pe":  # Smart Lock
+            [
+                TuyaBLEBinarySensorMapping(
+                    dp_id=47,
+                    description=BinarySensorEntityDescription(
+                        key="lock_motor_state",
+                        #icon="mdi:battery-alert",
+                        device_class=BinarySensorDeviceClass.LOCK,
+                    ),
+                    with_ping=True,
+                ),
+            ]
+        }
     ),
 }
 
@@ -97,6 +117,26 @@ class TuyaBLEBinarySensor(TuyaBLEEntity, BinarySensorEntity):
     ) -> None:
         super().__init__(hass, coordinator, device, product, mapping.description)
         self._mapping = mapping
+        if mapping.with_ping:
+            # Keep alive
+            # Gimdow PRO MAX will disconnect after around minute idle,
+            self._thread = Timer(60, self._ping_target)
+            self._thread.start()
+            self._pingdp = device.datapoints.get_or_create(
+                # refer to sdk, dp 52 is for deleting temp password
+                # should be safe as a dummy keep alive message
+                52,
+                TuyaBLEDataPointType.DT_BOOL,
+                False,
+            )
+
+    def _ping_target(self):
+        while True:
+            if self._pingdp:
+                self._hass.create_task(self._pingdp.set_value(True))
+            time.sleep(60)
+        #self._thread = Timer(60, self._ping_target)
+        #self._thread.start()
 
     @callback
     def _handle_coordinator_update(self) -> None:
