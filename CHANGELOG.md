@@ -86,8 +86,8 @@ and this project adheres to [Semantic Versioning].
 - Connection to the device is postponed now. Previously some out of range device might prevents HA from fully booting.
 - Improved connection stability.
 
-## [0.1.9] - 2025-05-25
+## [0.1.9] - 2025-12-23
 
 ### Added
 
-- Added support for Smart Lock mqc2hevy.
+- Fixed integration with Home Assistant 2025.12
